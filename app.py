@@ -163,6 +163,7 @@ df2["grade"] = df2["grade"].fillna("unavailable")
 ############################################################
 
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.Div([
@@ -212,7 +213,7 @@ def plotly_interactive(branch, grade, subject):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run()
 
 
 
